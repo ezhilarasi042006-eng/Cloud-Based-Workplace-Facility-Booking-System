@@ -1,0 +1,8 @@
+{
+  "name": "cloud-based-workplace-facility-booking-system",
+  "version": "1.0.0",
+  "description": "A simple workplace facility booking system built with HTML, CSS, JavaScript, Node.js and Express.",
+  "main": "server.js",
+  "scripts": { "start": "node server.js" },
+  "dependencies": { "express": "^4.21.2" }
+}

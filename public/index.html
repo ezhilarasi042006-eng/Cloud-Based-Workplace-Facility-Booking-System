@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Workplace Facility Booking</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#home"><span class="brand-icon">W</span><span>WorkSpace<span class="brand-light">Book</span></span></a>
+    <nav><a href="#facilities">Facilities</a><a href="#book">Book a facility</a><a href="#bookings">My bookings</a></nav>
+    <span class="cloud-badge">☁ Workplace Portal</span>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="hero-copy"><p class="eyebrow">WORKPLACE RESOURCE MANAGEMENT</p><h1>Your workspace,<br><span>booked smarter.</span></h1><p class="hero-text">Find and reserve meeting rooms, conference spaces, and focused work areas in one place.</p><a class="button button-light" href="#book">Book a facility <span>→</span></a></div>
+      <div class="hero-card"><div class="hero-card-top"><span class="live-dot"></span> WORKPLACE OVERVIEW <span class="today-label">TODAY</span></div><div class="overview-number" id="totalBookings">0</div><p>total reservations</p><div class="mini-stats"><div><strong id="activeBookings">0</strong><span>Confirmed</span></div><div><strong id="facilityCount">4</strong><span>Facilities</span></div></div><div class="availability-line"><span>Facility access</span><strong>● Available to employees</strong></div></div>
+    </section>
+
+    <section class="section" id="facilities"><div class="section-heading"><div><p class="eyebrow">EXPLORE YOUR OPTIONS</p><h2>Available facilities</h2></div><p class="section-subtitle">Choose a space that fits your team's needs.</p></div><div class="facility-grid" id="facilityGrid"><p class="muted">Loading facilities...</p></div></section>
+
+    <section class="booking-layout section" id="book"><div class="form-panel"><p class="eyebrow">MAKE A RESERVATION</p><h2>Book a facility</h2><p class="section-subtitle">Complete the details below to reserve your space.</p><form id="bookingForm">
+      <div class="form-grid"><label>Employee name<input name="employeeName" placeholder="Enter your full name" required maxlength="80" /></label><label>Work email<input name="employeeEmail" type="email" placeholder="name@company.com" required maxlength="120" /></label>
+      <label class="full">Select facility<select name="facilityId" id="facilitySelect" required><option value="">Choose a facility</option></select></label>
+      <label>Booking date<input name="date" id="bookingDate" type="date" required /></label><div class="time-grid"><label>Start time<input name="startTime" type="time" required value="10:00" /></label><label>End time<input name="endTime" type="time" required value="11:00" /></label></div>
+      <label class="full">Purpose of booking<textarea name="purpose" placeholder="e.g. Weekly project review" rows="3" required maxlength="300"></textarea></label></div>
+      <div id="formMessage" class="message" role="status"></div><button class="button button-primary" type="submit">Confirm booking <span>→</span></button>
+    </form></div><aside class="tips-panel"><div class="tip-icon">✦</div><h3>Good to know</h3><ul><li>Check the facility capacity before booking.</li><li>Choose a start and end time for the same day.</li><li>Overlapping confirmed bookings are prevented automatically.</li><li>You can cancel a reservation from the bookings list.</li></ul><div class="support-note"><strong>Need a different space?</strong><p>Review the available facilities above before submitting your request.</p></div></aside></section>
+
+    <section class="section bookings-section" id="bookings"><div class="section-heading"><div><p class="eyebrow">RESERVATION MANAGEMENT</p><h2>Recent bookings</h2></div><button class="button button-outline" id="refreshButton" type="button">↻ Refresh</button></div><div id="bookingList" class="booking-list"><p class="muted">Loading bookings...</p></div></section>
+  </main>
+  <footer><a class="brand footer-brand" href="#home"><span class="brand-icon">W</span><span>WorkSpace<span class="brand-light">Book</span></span></a><p>Workplace facility booking made simple.</p><span>Cloud-Based Workplace Facility Booking System</span></footer>
+  <script src="app.js"></script>
+</body>
+</html>
